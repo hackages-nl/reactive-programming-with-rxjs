@@ -1,0 +1,32 @@
+{
+  "name": "reactive-programming-exposed",
+  "version": "0.0.1",
+  "author": "Hackages Team <007@hackages.io>",
+  "license": "See license",
+  "dependencies": {
+    "@babel/preset-env": "^7.24.4",
+    "@types/jest": "^29.5.12",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^23.2.0",
+    "rxjs": "^7.8.1",
+    "ts-node": "^10.9.2",
+    "vite": "^5.2.10"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.24.1",
+    "@jest/globals": "^29.7.0",
+    "@types/jsdom": "^21.1.6",
+    "jest": "^29.7.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "prestart": "pnpm install",
+    "pretest": "pnpm install",
+    "start": "jest",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  }
+}
