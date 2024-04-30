@@ -7,16 +7,14 @@
  */
 
 import { Observer } from "../types";
+import { Observable } from "./observable";
 
 export function fromEvent(
   el: HTMLElement,
   eventName: "click" | "change" | "error" | "input"
 ) {
-
-  return {
-    subscribe(observer: Partial<Observer>){
-
-     try {
+    function fromEventProducer(observer: Observer){
+      try {
       el.addEventListener(eventName, observer.next);
 
       return {
@@ -30,6 +28,6 @@ export function fromEvent(
       observer.complete();
      } 
     }
-  }
+  return new Observable(fromEventProducer);
 }
 
